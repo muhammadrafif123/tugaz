@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Praktikum</title>
+</head>
+<body>
+  <main>
+    <h1>Formulir Pendaftaran Praktikum</h1>
+
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>Data Pribadi</legend>
+
+        <p>
+          <label for="nama">Nama Lengkap</label><br>
+          <input type="text" id="nama" name="nama" required
+                 minlength="3" placeholder="Contoh: Budi Santoso">
+        </p>
+
+        <p>
+          <label for="nim">NIM (10 digit)</label><br>
+          <input type="text" id="nim" name="nim" required
+                 pattern="[0-9]{10}" title="Masukkan 10 digit angka">
+        </p>
+
+        <p>
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+          <label for="tgl">Tanggal Lahir</label><br>
+          <input type="date" id="tgl" name="tgl" max="2010-12-31">
+        </p>
+
+        <p>
+          <label for="hp">Nomor HP</label><br>
+          <input type="tel" id="hp" name="hp" pattern="08[0-9]{8,11}"
+                 title="Diawali 08, 10-13 digit">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Data Akademik</legend>
+
+        <p>
+          <label for="prodi">Program Studi</label><br>
+          <input list="daftar-prodi" id="prodi" name="prodi">
+          <datalist id="daftar-prodi">
+            <option value="Teknik Informatika">
+            <option value="Sistem Informasi">
+            <option value="Teknik Komputer">
+          </datalist>
+        </p>
+
+        <p>
+          <label for="semester">Semester</label><br>
+          <select id="semester" name="semester" required>
+            <option value="">-- Pilih --</option>
+            <optgroup label="Ganjil">
+              <option>1</option>
+              <option>3</option>
+              <option>5</option>
+            </optgroup>
+            <optgroup label="Genap">
+              <option>2</option>
+              <option>4</option>
+              <option>6</option>
+            </optgroup>
+          </select>
+        </p>
+
+        <p>
+          <label for="ipk">Rentang IPK:</label>
+          <output id="hasil-ipk">3.0</output><br>
+          <input type="range" id="ipk" name="ipk" min="0" max="4" step="0.1" value="3"
+                 oninput="document.getElementById('hasil-ipk').value = this.value">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferensi</legend>
+
+        <p>Kelas yang dipilih:</p>
+        <p>
+          <input type="radio" id="pagi" name="kelas" value="pagi" required>
+          <label for="pagi">Pagi</label>
+          <input type="radio" id="sore" name="kelas" value="sore">
+          <label for="sore">Sore</label>
+        </p>
+
+        <p>Minat:</p>
+        <p>
+          <input type="checkbox" id="frontend" name="minat" value="frontend">
+          <label for="frontend">Front-end</label>
+          <input type="checkbox" id="backend" name="minat" value="backend">
+          <label for="backend">Back-end</label>
+        </p>
+
+        <p>
+          <label for="berkas">Unggah KRS (PDF)</label><br>
+          <input type="file" id="berkas" name="berkas" accept=".pdf">
+        </p>
+
+        <p>
+          <label for="catatan">Catatan</label><br>
+          <textarea id="catatan" name="catatan" rows="4" cols="40"
+                    maxlength="200"></textarea>
+        </p>
+      </fieldset>
+
+      <p>
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+      </p>
+    </form>
+  </main>
+</body>
+</html>

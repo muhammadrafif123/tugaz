@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profil Program Studi Teknologi Informasi: tentang prodi, kurikulum, galeri, dan formulir kontak">
+  <title>Profil Program Studi Teknologi Informasi</title>
+</head>
+<body>
+
+  <header>
+    <h1>Profil Program Studi Teknologi Informasi</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#kurikulum">Kurikulum</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="profil">
+      <h2>Tentang Program Studi</h2>
+
+      <article>
+        <header>
+          <h3>Sekilas Program Studi</h3>
+          <p>Diperbarui pada
+            <time datetime="2026-09-30">30 September 2026</time>
+          </p>
+        </header>
+        <p>Program Studi Teknologi Informasi mempelajari pengembangan perangkat lunak,
+           basis data, jaringan komputer, dan pengelolaan sistem informasi.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3>Visi dan Misi</h3>
+        </header>
+        <p>Visi kami adalah menghasilkan lulusan yang kompeten di bidang teknologi
+           informasi dan siap bekerja di dunia industri.</p>
+        <details data-topik="karier">
+          <summary>Prospek karier lulusan</summary>
+          <ul>
+            <li>Web Developer</li>
+            <li>Database Administrator</li>
+            <li>Network Engineer</li>
+          </ul>
+        </details>
+      </article>
+    </section>
+
+    <section id="kurikulum">
+      <h2>Kurikulum</h2>
+
+      <table>
+        <caption>Contoh Mata Kuliah Semester 1 sampai 3</caption>
+        <thead>
+          <tr>
+            <th scope="col">Semester</th>
+            <th scope="col">Mata Kuliah</th>
+            <th scope="col">SKS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" rowspan="2">Semester 1</th>
+            <td>Algoritma dan Pemrograman</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Pengantar Teknologi Informasi</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row" rowspan="2">Semester 2</th>
+            <td>Basis Data</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Jaringan Komputer</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th scope="row" rowspan="2">Semester 3</th>
+            <td>Pemrograman Web</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Rekayasa Perangkat Lunak</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total SKS</td>
+            <td>17</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section id="galeri">
+      <h2>Galeri</h2>
+
+      <figure>
+        <img src="media/foto.jpg" alt="Karakter anime berjubah hitam bermotif awan merah dan bertopeng oranye, duduk di atas batu dilihat dari belakang" width="400">
+        <figcaption>Gambar 1. Ilustrasi karakter anime duduk di atas tebing batu.</figcaption>
+      </figure>
+
+      <video controls width="480" poster="media/foto.jpg" preload="metadata">
+        <source src="media/video.mp4" type="video/mp4">
+        Browser Anda tidak mendukung elemen video.
+      </video>
+    </section>
+
+    <section id="kontak">
+      <h2>Hubungi Kami</h2>
+
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Data Pengirim</legend>
+
+          <p>
+            <label for="nama">Nama Lengkap</label><br>
+            <input type="text" id="nama" name="nama" required
+                   minlength="3" placeholder="Contoh: Budi Santoso">
+          </p>
+
+          <p>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required>
+          </p>
+
+          <p>
+            <label for="hp">Nomor HP</label><br>
+            <input type="tel" id="hp" name="hp" pattern="08[0-9]{8,11}"
+                   title="Diawali 08, 10-13 digit">
+          </p>
+
+          <p>Status:</p>
+          <p>
+            <input type="radio" id="calon" name="status" value="calon" required>
+            <label for="calon">Calon mahasiswa</label>
+            <input type="radio" id="mahasiswa" name="status" value="mahasiswa">
+            <label for="mahasiswa">Mahasiswa</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Isi Pesan</legend>
+
+          <p>
+            <label for="topik">Topik</label><br>
+            <select id="topik" name="topik" required>
+              <option value="">-- Pilih --</option>
+              <option value="pendaftaran">Pendaftaran</option>
+              <option value="kurikulum">Kurikulum</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="pesan">Pesan</label><br>
+            <textarea id="pesan" name="pesan" rows="4" cols="40"
+                      required minlength="10" maxlength="300"></textarea>
+          </p>
+
+          <p>
+            <input type="checkbox" id="setuju" name="setuju" value="ya" required>
+            <label for="setuju">Saya setuju data saya digunakan untuk keperluan balasan</label>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Kirim</button>
+          <button type="reset">Reset</button>
+        </p>
+      </form>
+    </section>
+
+    <aside>
+      <h2>Info Singkat</h2>
+      <ul>
+        <li>Jam layanan: 08.00 - 16.00 WIB</li>
+        <li>Lab: Gedung B, Lantai 2</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <address>
+      Program Studi Teknologi Informasi<br>
+      Email: <a href="mailto:prodi@kampus.ac.id">prodi@kampus.ac.id</a>
+    </address>
+    <p><small>&copy; 2026 Program Studi Teknologi Informasi. Hak cipta dilindungi.</small></p>
+  </footer>
+
+</body>
+</html>

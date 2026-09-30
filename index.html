@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal informasi kampus untuk praktikum HTML lanjut">
+  <title>Portal Kampus | Praktikum HTML Lanjut</title>
+</head>
+<body>
+
+  <header>
+    <h1>Portal Informasi Kampus</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="tabel.html">Jadwal</a></li>
+        <li><a href="form.html">Pendaftaran</a></li>
+        <li><a href="multimedia.html">Galeri</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="berita">
+      <h2>Berita Terbaru</h2>
+
+      <article>
+        <header>
+          <h3>Seminar Nasional Teknologi Informasi</h3>
+          <p>Dipublikasikan pada
+            <time datetime="2026-09-28">28 September 2026</time>
+          </p>
+        </header>
+        <p>Seminar akan dilaksanakan di Aula Utama dengan menghadirkan
+           praktisi dari berbagai perusahaan teknologi.</p>
+        <figure>
+          <img src="media/foto.jpg" alt="Karakter anime berjubah hitam bermotif awan merah dan bertopeng oranye, duduk di atas batu dilihat dari belakang" width="400">
+          <figcaption>Gambar 1. Ilustrasi karakter anime duduk di atas tebing batu.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <header>
+          <h3>Pendaftaran Praktikum Semester Ganjil</h3>
+          <p><time datetime="2026-09-25">25 September 2026</time></p>
+        </header>
+        <p>Pendaftaran dibuka hingga akhir bulan Oktober.</p>
+      </article>
+    </section>
+
+    <section id="faq">
+      <h2>Pertanyaan Umum</h2>
+      <details>
+        <summary>Bagaimana cara mendaftar praktikum?</summary>
+        <p>Isi formulir pada halaman Pendaftaran, lalu tunggu konfirmasi.</p>
+      </details>
+      <details>
+        <summary>Apakah praktikum wajib diikuti?</summary>
+        <p>Ya, kehadiran minimal 80% dari seluruh pertemuan.</p>
+      </details>
+    </section>
+
+    <aside>
+      <h2>Info Singkat</h2>
+      <ul>
+        <li>Jam layanan: 08.00 - 16.00 WIB</li>
+        <li>Lab: Gedung B, Lantai 2</li>
+      </ul>
+    </aside>
+
+    <section id="atribut-demo">
+      <h2>Demo Atribut</h2>
+
+      <p title="Ini adalah tooltip" contenteditable="true">
+        Paragraf ini dapat diedit langsung di browser.
+      </p>
+
+      <p hidden>Teks ini tersembunyi.</p>
+
+      <ul>
+        <li data-kode="TI101" data-sks="3">Pemrograman Web Lanjut</li>
+        <li data-kode="TI102" data-sks="3">Basis Data</li>
+      </ul>
+
+      <button type="button" aria-label="Tutup panel informasi">X</button>
+
+      <div role="status" aria-live="polite">Data berhasil disimpan.</div>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      Program Studi Teknik Informatika<br>
+      Email: <a href="mailto:prodi@kampus.ac.id">prodi@kampus.ac.id</a>
+    </address>
+    <p><small>&copy; 2026 Portal Kampus. Hak cipta dilindungi.</small></p>
+  </footer>
+
+</body>
+</html>

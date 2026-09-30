@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Multimedia</title>
+</head>
+<body>
+  <main>
+    <h1>Galeri Multimedia</h1>
+
+    <section>
+      <h2>Gambar Responsif</h2>
+      <picture>
+        <source media="(min-width: 800px)" srcset="media/foto.jpg">
+        <source media="(min-width: 400px)" srcset="media/foto.jpg">
+        <img src="media/foto.jpg" alt="Karakter anime berjubah hitam bermotif awan merah dan bertopeng oranye, duduk di atas batu dilihat dari belakang" style="max-width:100%">
+      </picture>
+    </section>
+
+    <section>
+      <h2>Video</h2>
+      <video controls width="480" poster="media/foto.jpg" preload="metadata">
+        <source src="media/video.mp4" type="video/mp4">
+        Browser Anda tidak mendukung elemen video.
+      </video>
+    </section>
+
+    <section>
+      <h2>Audio</h2>
+      <audio controls>
+        <source src="media/audio.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+      </audio>
+    </section>
+
+    <section>
+      <h2>Peta Tersemat</h2>
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=110.35%2C-7.82%2C110.40%2C-7.78"
+        width="480" height="300" title="Peta lokasi kampus" loading="lazy">
+      </iframe>
+    </section>
+  </main>
+</body>
+</html>
